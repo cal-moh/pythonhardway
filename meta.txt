@@ -1,1 +1,8 @@
-Start using Git exercise 5 onwards
+Start using Git exercise 5 onwards - DONE
+
+20201103
+Start using:
+- JSONs
+- Access Tokens
+- Loggers and rotating handlers
+
