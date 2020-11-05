@@ -9,3 +9,21 @@ Start using:
 20201105
 Python Style Guide here - https://www.python.org/dev/peps/pep-0008/
 - Learned a bit about indents and hanging indents, and not putting arguments in the first line, in case of overflowing lines
+
+Function creation checklist:
+- Did the function definition start with def?
+- Does the function name only have characters and underscores?
+- Is there an open paranthesis right after the function name?
+- Are there arguments with type definitions (optional) in the parantheses
+- Are there commas separating the arguments?
+- Is each argument unique?
+- Was the paranthesis closed after the arguments were put in?
+- Was a colon put at the end of the line to mark end of line?
+- Is all of the function's code indented?
+- Was code de-dented at the end of the function?
+
+Function execution checklist:
+- Was the function run by typing its name?
+- Were the round paranteses used?
+- Was a set of arguments supplied?
+- Were these arguments separated by commas?
