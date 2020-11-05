@@ -1,6 +1,7 @@
 from sys import argv
 # from os.path import exists
-
+# Reading about import functions - call made to import() with arguments, and an import is made into the local scope, with a local named binding created for this. Named binding. Interesting.
+# This became a rabbit hole and I ended up reading more about race conditions too, in addition to import() and the python style guide (link in the meta.txt file) -https://stackoverflow.com/questions/34510/what-is-a-race-condition 
 # script, from_file, to_file = argv
 
 open(argv[2], 'w').write(open(argv[1], 'r').read())

@@ -6,3 +6,6 @@ Start using:
 - Access Tokens
 - Loggers and rotating handlers
 
+20201105
+Python Style Guide here - https://www.python.org/dev/peps/pep-0008/
+- Learned a bit about indents and hanging indents, and not putting arguments in the first line, in case of overflowing lines
