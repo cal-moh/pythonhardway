@@ -1,0 +1,23 @@
+print() - print() is a function (note the parantheses) which is inbuilt in python. It prints the output of whatever is inside the parantheses to the standard output stream. This can be a string - print("I'm an albatross"), a math operation - a = 5; print(a+5), a concatenation operation - print("This is", "quite a scene", end=""). print("x"*10) would yield xxxxxxxxxx. A """ will let you do a multi-line, any-character-acceptable sort of a string declaration. 
+
+end="" - At the end of a print function, this can be used to suppress the next line character. 
+
+# - Identifier for the compiler to not process the contents of the line that follows this until the next line character \n appears
+
+\n - \ is a signifier for special characters \n is next line, \r is carriage return (*not sure what this means), \t is tabbed space and so on. \ can also be used to suppress the special function of a character - print("This is a \"fucking\" good car"). \a is a bell character that rings the sound out on some compilers. 
+
+Formatting - tells the compiler that there is a formatted special case in the curly brackets that follow in the print (*Does this work for all string functions other than print too?) -- print(f"This is a {adjective} good car"); adjective = "fucking". Can work across data types too - adjective = 3 will also work. The other way to use formatting, especially when the input is not being made at the same stage as the use of {} -- statement = "This is a {} good car."; adjective = input("Adjective"); print(statement.format(adjective))
+
+PEMDAS - Parantheses, exponent, multiplication-division, addition-subtraction - this is the order of operations in a string, as moving from left to right. In case MD or AS come up together, the left-to-right order takes precedence (leftward > rightward). 
+
+Documentation - on Windows, this reads as python -m pydoc <command>
+
+File modes have all kinds of gotchas. open(filename) is opened in the 'r' mode. Opening in 'w' mode truncates the file. 'r+' mode typically opens in 'r+w' mode. 'a+' is the best for it is append plus read mode. Certain files if not opened up in the 'b' binary mode will get fucked up on line endings and so on, which different interpreters interpret differently. The object that results from f = open(filename) is not a string or an int or char, but a stream. This will have an opening, a seeking, and a closing function associated with it. Basically, a navigation of sorts. Was thinking that this is probably how even faster moving streams evolve. Then there is the idea of encoding - was thinking that I would want to standardise encoding and buffer sizes especially if I am writing an enterprise application, to ensure that these are of a standard explicitly declared size. I would also want to put this up in the documentation, and in conventions across the team. I also got to try "with open(filename, mode) as file:" -- this explicitly opens up a file and then closes it when the with statement is done. Else, I'll have to explicitly do a filename.close() later, which might interfere with this all the time. The other interesting thing I got to read through this is what a race condition is - when two threads are editing the same file (I'll think of it as bit of memory) for different purposes. Which means that whenever I'm thinking of implementing such a thing in the future, I must think of implementing a thread lock. Or I must think of getting the value from the file, closing it down, then opening it, and putting it back into file. 
+
+Import of modules is basically pre-prepared functions that we can import and give aliases to. from sys import arg.
+
+argv lets us use the arguments provided on the command line itself. I like the idea of initialising this as "script, arg1, arg2 = argv", lest some part of the code end up treating the script name mistakenly as a value, and getting stuck in a gotcha. 
+
+Through all of this, I've been setting up a git repo, and adding and committing code to it, especially changes. Setting this up was a bit of a bitch and I had to force my way through some of this. I also want to write a script separately which goes over all the other scripts and draws out learning statements which, I hope, I can mark with a double hash in front of their names. 
+
+I learned about functions. Loved the analogy that functions are to pieces of code what variables are to constants - things that can be reused, edited from the outside by supplying them with modifiers. There was the thing about the return keyword, which is basically a keyword, not a statement, that can return an output from this script to a consumer other than stdout. 

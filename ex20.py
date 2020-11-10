@@ -8,8 +8,9 @@ def print_all(f):
 def rewind(f):
     f.seek(0)
 # This is far more interesting - how do lines get changed here? -- A
+# Spent some time with itertools here. Good thing to think about in the future -https://docs.python.org/3/library/itertools.html
 def print_a_line(line_count, f):
-    print(line_count, f.readline())
+    print(line_count, f.readline(), end='')
 # What are the differences between the next two lines
 # with open(input_file, 'r') as current_file:
     # print("")
