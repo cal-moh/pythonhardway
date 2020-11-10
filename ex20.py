@@ -30,12 +30,12 @@ current_line = 1
 # current_file.seek(current_line) # -- B
 print_a_line(current_line, current_file)
 # Testing Hypothesis A -- suppressing current_line increments -- A
-current_line = current_line + 1 # -- A
+current_line += 1 # -- A
 # current_line = current_line + 2 # -- B
 # current_file.seek(current_line) # -- B
 print_a_line(current_line, current_file)
 # Testing Hypothesis A -- suppressing current_line increments -- A
-current_line = current_line + 1 # -- A
+current_line += 1 # -- A
 # current_line = current_line + 2 # -- B
 # current_file.seek(current_line) # -- B
 print_a_line(current_line, current_file)
