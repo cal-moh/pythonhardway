@@ -32,3 +32,5 @@ I like this clean code guide - https://smalldata.tech/blog/2018/09/16/clean-code
 There are probably going to be a lot of opinions around the right way to do this. That's okay, as long as there is one consistent way in which you start, and don't let it stop your work.
 
 Something more on short circuiting behaviour - first false, or circuit cut off, or last truthy statement. Hence operands  - https://stackoverflow.com/questions/22598547/why-do-and-or-return-operands-in-python
+
+Something on style from Guido van Rossum - code is read more often than it is written. So code should be optimised for readability, than for hijinks and gymnastics, if the choice is not stark between efficiency and the like. 
