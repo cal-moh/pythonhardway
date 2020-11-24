@@ -5,6 +5,7 @@ def gold_room():
     print("This room is full of gold. How much do you take?")
     
     choice = input("> ")
+    
     if "0" in choice or "1" in choice:
         how_much = int(choice)
     else:
@@ -24,18 +25,21 @@ def bear_room():
     print("How are you going to move the bear?")
     bear_moved = False
     
+# Declaring a list here that houses all options, and putting it all in one place - wondering if that is a good idea? Should be, because it makes for easier readability
+    choicelist = ["take honey", "taunt bear", "open door"]
+    
     while True:
         choice = input("> ")
         
-        if choice == "take honey":
+        if choice == choicelist[0]: # "take honey"
             dead("The bear looks at you then slaps your face off.")
-        elif choice == "taunt bear" and not bear_moved:
+        elif choice == choicelist[1] and not bear_moved: #"take honey" and bear_moved == False 
             print("The bear has moved from the door.")
             print("You can go through it now.")
             bear_moved = True
-        elif choice == "taunt bear" and bear_moved:
+        elif choice == choicelist[1] and bear_moved: #"take honey" and bear_moved == True
             dead("The bear gets pissed off and chews your leg off.")
-        elif choice == "open door" and bear_moved:
+        elif choice == choicelist[2] and bear_moved: #"open door" and bear_moved == True
             gold_room()
         else:
             print("I got no idea what that means.")
@@ -54,11 +58,15 @@ def cthulhu_room():
         dead("Well that was tasty")
     else:
         cthulhu_room()
+
 # The dead() function basically just writes out a sarcastic "Good job" at the end of the statement with which it is called, and exits out of the execution
+
 def dead(why):
     print(why, "Good job!")
     exit(0)
+
 # The start function is a two door choice problem - either of the doors is taken, or the dead() function is invoked, which makes the program exit from everything
+
 def start():
     print("You are in a dark room.")
     print("There is a door to your right and left.")
@@ -72,5 +80,7 @@ def start():
         cthulhu_room()
     else:
         dead("You stumble around the room until you starve.")
+
 # This function starts the entire program off
+
 start()
